@@ -6,14 +6,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
-<style type="text/css">
+<link rel="stylesheet" href="{% static 'main/css/style2.css' %}" type="text/css">
+<!-- <style type="text/css">
 .prod1212 .thumb-wrapper {
 	padding: 25px 15px;
 	background: #fff;
 	border-radius: 6px;
 	text-align: center;
 	position: relative;
-	box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+	box-shadow: inset 0 0 2px 2px rgb(226 234 239);
 }
 .prod1212 .img-box {
 	height: 120px;
@@ -103,14 +104,14 @@ h2::after {
 		width: unset;
 	}
 }
-</style>
+</style> -->
 {% endblock main_head %}
 {% block main_body %}
-<div class="container-fluid" style="background-color: #e2eaef;">
-		<h2>All <b>{{catg}}</b> Products</h2>
+<div class="container-fluid" style="background-color: #ebf7ff;">
+		<h2>Tất cả <b>{{catg}}</b></h2>
 		<div class="row pt-1" style="justify-content: center;">
 			{% if not product %}
-			<div class="text-center"><img src="{% static 'main/images/no-product-found.png' %}"><h3 class="">Please check the spelling or try searching for something else</h3></div>
+			<div class="text-center"><img src="{% static 'main/images/no-product-found.png' %}"><h3 class="">Vui lòng kiểm tra chính tả hoặc thử tìm kiếm thứ khác</h3></div>
 			{% endif %}
 			{% for i in product reversed %}
 			<div class="p-1 prod1212">
@@ -120,12 +121,12 @@ h2::after {
 						<img src="{{i.0.image1.url}}" class="img-responsive img-fluid" alt="">
 					</div>
 					<div class="thumb-content">
-						<small>{{i.0.product_name}}</small>
+						<small style="font-weight: bold;">{{i.0.product_name}}</small>
 						<p class="item-price"><strike><i>$</i>{{i.0.price_not}}</strike> <span><i>$</i>{{i.0.price}}</span></p>
 
 						<div>
 							{% if i.1 %}
-							<a p_id="{{i.0.product_id}}" class="btn btn-primary oprbtn" id="ord{{i.0.product_id}}">Order Now</a>
+							<a p_id="{{i.0.product_id}}" class="btn btn-primary oprbtn" id="ord{{i.0.product_id}}">Đặt hàng ngay</a>
 							<div id="ord{{i.0.product_id}}sizesof" style="display: none;">
 								{% for me in i.1 %}
 								<form method="GET" style="display: inline;" action="/order_now">
@@ -145,7 +146,7 @@ h2::after {
 											<form method="GET" style="display: inline;" action="/order_now">
 														<input type="text" name="prod_id" value="{{i.0.product_id}}" style="display: none;">
 										
-														<button type="submit" class="btn btn-primary oprbtn">Order Now</button>
+														<button type="submit" class="btn btn-primary oprbtn">Đặt hàng ngay</button>
 													</form>	
 												<a prod_id="{{i.0.product_id}}" class="btn pt-1 pb-1 pr-2 pl-2 add_to_cart"><i class="fa fa-cart-plus" aria-hidden="true"></i></a>
 										{% endif %}

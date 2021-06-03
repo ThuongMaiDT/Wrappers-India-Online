@@ -33,7 +33,7 @@
 {% endblock main_head %}
 {% block main_body %}
 <div class="container">
-    <h3><b>Checkout</b></h3>
+    <h3><b>Thanh toán</b></h3>
     <div class="col my-4">
         <div class="my-4">
             <ul class="list-group">
@@ -46,11 +46,11 @@
                 {% endfor %}
             </ul>
         </div>
-        <b style="float: right;">Total Payable <i>$</i>{{total}} </b>.
+        <b style="float: right;">Tổng phải trả<i>$</i>{{total}} </b>.
     </div>
     <hr>
     <div class="col my-4">
-        <h4 style="text-align: center;">Enter Address & Other Details:</h4>
+        <h4 style="text-align: center;">Nhập địa chỉ và các chi tiết khác:</h4>
         <form method="post" action="#">{% csrf_token %}
             <div class="form-row">
                 <div class="form-group col-md-3">
@@ -90,9 +90,9 @@
             </div>
             <div class="custom-control custom-switch">
               <input type="checkbox" class="custom-control-input" id="customSwitch1" name="pay_mode">
-              <label class="custom-control-label" for="customSwitch1">Cash on Delivery</label>
+              <label class="custom-control-label" for="customSwitch1">Thanh toán khi giao hàng</label>
             </div>
-            <button type="submit" class="btn btn-danger" style="float: right; background-color: #be2714;">Payment</button>
+            <button type="submit" class="btn btn-danger" style="float: right; background-color: #be2714;">Thanh toán</button>
         </form>
         <br>
     </div>

@@ -7,6 +7,9 @@
   input {
     display: none;
   }
+  .menu_close{
+    background-color: none !important;
+  }
 </style>
 <form method="POST" class="signup_form mr-2 ml-2">
   {% csrf_token %}
@@ -32,8 +35,8 @@
     </div>
   </fieldset>
   <section class="mt-4 mr-1 ml-1">
-    <button type="submit" id="disbtn1">Sign Up</button>
-    <small>Already Registered? &nbsp;<a href="{% url 'login' %}">Log In</a></small>
+    <button type="submit" id="disbtn1">Đăng ký</button>
+    <small>Already Registered? &nbsp;<a href="{% url 'login' %}">Đăng nhập</a></small>
   </section>
   <div class="subtitle pt-2 mt-1"></div>
 </form>

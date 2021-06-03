@@ -1,4 +1,6 @@
-
+body{
+    font-family: cursive;
+}
 h2 {
     color: #231f20;
     font-size: 26px;
@@ -64,8 +66,8 @@ h2::after {
 }
 .carousel1 .item .btn:hover, .carousel .item .btn:focus {
     color: #fff;
-    background: #231f20;
-    border-color: #231f20;
+    background: #c01f14;
+    border-color: #f44336;
     box-shadow: none;
 }
 .carousel1 .item .btn i {
@@ -75,6 +77,12 @@ h2::after {
 }
 .carousel1 .thumb-wrapper {
     text-align: center;
+    padding: 10px 15px;
+    background: #fff;
+    border-radius: 6px;
+    text-align: center;
+    position: relative;
+    box-shadow: inset 0 0 2px 2px rgb(226 234 239);
 }
 .carousel1 .thumb-content {
     padding: 15px;
@@ -82,7 +90,7 @@ h2::after {
 .carousel1 .carousel-control {
     height: 100px;
     width: 40px;
-    background: none;
+    /* background: none; */
     margin: auto 0;
     background: rgba(0, 0, 0, 0.2);
 }

@@ -10,6 +10,7 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
    background-attachment: fixed;
+   font-family: cursive;
 }
 
 @font-face {
@@ -23,13 +24,14 @@ body{
 
 .signup_form button{
 	color: #fff;
-	background-color: #231f20;
-	border:1px solid #231f20;
+	font-weight: bold;
+	background-color: #c22f0bba;
+	border:1px solid #ff0000db;
 	border-radius: 3px;
-	color: #f4f4f4;
 	height: 40px;
-	width: 80px;
+	width: 120px;
 	font-size: 17px;
+	/* margin-left: 100px; */
 }
 .subtitle
 {

@@ -1,7 +1,7 @@
 {% extends 'main/base.html' %}
 {% block main_head %}
 {% load static %}
-<title>{{title}} || Wrappers</title>
+<title>{{title}}</title>
 <link rel="stylesheet" type="text/css" href="{% static 'main/css/signup.css' %}">
 {% endblock main_head %}
 {% block main_body %}
@@ -18,7 +18,7 @@
                         {% if title %}
                         <h2 class="mb-2" style="color: #080d2b; margin-top: -25px;">{{ title }}</h2>
                         {% else %}
-                        <h2 class="mb-2" style="color: #080d2b; margin-top: -25px;">Login </h2>
+                        <h2 class="mb-2" style="color: #080d2b; margin-top: -25px;">Đăng nhập </h2>
                         {% endif %}
                     </div>
                     {% if messages %}
